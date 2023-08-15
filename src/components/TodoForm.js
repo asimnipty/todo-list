@@ -3,15 +3,29 @@ import './TodoForm.css'
 
 export const TodoForm = () => {
 
-    const [item, setItem] = useState('');
-        
+    const [newItem, setNewItem] = useState('');
+    const [todos, setTodos] = useState([]);
+
+    
+    function handleSubmit(e) {
+
+    }
 
 
 
   return (
-    <form className='todoForm'>
-        <input type='text' className='todo-input' placeholder='What need to do' />
-        <button type='submit' className='todo-btn'>Add Task</button>
+    <form onSubmit={handleSubmit} className='todoForm'>
+      <div className='form-row'>
+        <label htmlFor='item'>New Item</label>
+        <input 
+         className='todo-input' 
+         placeholder='What need to do' 
+         value={newItem} 
+         onChange={e => setNewItem(e.target.value)}
+         type='text'
+         />
+      </div>
+      <button type='submit' className='todo-btn'>Add Task</button>
         <li>
             <ul> </ul>
 
