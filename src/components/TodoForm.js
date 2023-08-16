@@ -6,8 +6,9 @@ export const TodoForm = () => {
     const [newItem, setNewItem] = useState('');
     const [todos, setTodos] = useState([]);
 
-    
+
     function handleSubmit(e) {
+
 
     }
 
@@ -27,7 +28,10 @@ export const TodoForm = () => {
       </div>
       <button type='submit' className='todo-btn'>Add Task</button>
         <li>
-            <ul> </ul>
+            <label>
+              <input type='checkbox' />
+              item 1
+            </label>
 
         </li>
     </form>
